@@ -40,7 +40,7 @@
   "dependencies": {
     "@astrojs/internal-helpers": "workspace:*",
     "@astrojs/underscore-redirects": "workspace:*",
-    "@netlify/blobs": "^10.0.2",
+    "@netlify/blobs": "^8.2.0",
     "@netlify/functions": "^4.1.8",
     "@netlify/vite-plugin": "^2.3.4",
     "@vercel/nft": "^0.29.2",
