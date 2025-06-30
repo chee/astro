@@ -75,8 +75,8 @@ jobs:
     needs: build
     strategy:
       matrix:
-        OS: []
-        NODE_VERSION: []
+        OS: [windows-2025]
+        NODE_VERSION: [22]
         include:
           - os: macos-14
             NODE_VERSION: 22
