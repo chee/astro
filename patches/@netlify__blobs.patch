@@ -1603,10 +1603,10 @@ index 469fd84fdb254b9f662f28b1c5a6203bceef832b..a5ff89c4a287b4cf142216fb5fe499b0
  };
 +export { connectLambda, getDeployStore, getStore, listStores, setEnvironmentContext };
 diff --git a/dist/server.js b/dist/server.js
-index 74ee475f0e81d7705c1664471f361f17596af78f..5f5d7dbe5b8b97816a160bbf10363cd632277d76 100644
+index 74ee475f0e81d7705c1664471f361f17596af78f..48a31a38f5be544ea7ee8c6df7a7e805923b2137 100644
 --- a/dist/server.js
 +++ b/dist/server.js
-@@ -1,403 +1,407 @@
+@@ -1,403 +1,409 @@
  import {
 -  METADATA_HEADER_INTERNAL,
 -  SIGNED_URL_ACCEPT_HEADER,
@@ -2219,6 +2219,8 @@ index 74ee475f0e81d7705c1664471f361f17596af78f..5f5d7dbe5b8b97816a160bbf10363cd6
 +				},
 +			});
 +		} catch (error) {
++			console.error('gonna 500 btw');
++			console.error(error);
 +			if (isNodeError(error)) {
 +				this.logDebug('Error when writing data:', error);
 +			}
