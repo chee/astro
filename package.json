@@ -84,6 +84,9 @@
       "workerd",
       "@biomejs/biome",
       "sharp"
-    ]
+    ],
+    "patchedDependencies": {
+      "@netlify/blobs": "patches/@netlify__blobs.patch"
+    }
   }
 }

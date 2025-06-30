@@ -244,19 +244,19 @@ export async function loadFixture(inlineConfig) {
 				expandDirectories: false,
 			}),
 		clean: async () => {
-			await fs.promises.rm(config.outDir, {
-				maxRetries: 10,
-				recursive: true,
-				force: true,
-			});
-			const astroCache = new URL('./node_modules/.astro', config.root);
-			if (fs.existsSync(astroCache)) {
-				await fs.promises.rm(astroCache, {
-					maxRetries: 10,
-					recursive: true,
-					force: true,
-				});
-			}
+			// await fs.promises.rm(config.outDir, {
+			// 	maxRetries: 10,
+			// 	recursive: true,
+			// 	force: true,
+			// });
+			// const astroCache = new URL('./node_modules/.astro', config.root);
+			// if (fs.existsSync(astroCache)) {
+			// 	await fs.promises.rm(astroCache, {
+			// 		maxRetries: 10,
+			// 		recursive: true,
+			// 		force: true,
+			// 	});
+			// }
 		},
 		loadAdapterEntryModule: async () => {
 			const url = new URL(`./server/entry.mjs?id=${fixtureId}`, config.outDir);
