@@ -684,10 +684,10 @@ index fbfa5be028ae5f6d03b7dae2b369238cda3df97d..3351a7bd93c6531d53e5adeb88646eb1
 +	getClientOptions,
  };
 diff --git a/dist/main.js b/dist/main.js
-index 469fd84fdb254b9f662f28b1c5a6203bceef832b..0e6633cd3432d7bc6114ac1aff7a79df93be8b43 100644
+index 469fd84fdb254b9f662f28b1c5a6203bceef832b..a5ff89c4a287b4cf142216fb5fe499b058fe85b0 100644
 --- a/dist/main.js
 +++ b/dist/main.js
-@@ -1,450 +1,477 @@
+@@ -1,450 +1,487 @@
  import {
 -  BlobsInternalError,
 -  Client,
@@ -1199,6 +1199,16 @@ index 469fd84fdb254b9f662f28b1c5a6203bceef832b..0e6633cd3432d7bc6114ac1aff7a79df
 +				modified: true,
 +			};
 +		}
++		console.error('RES:');
++		console.error(res);
++		console.error('COND:');
++		console.error(conditions);
++		console.error('BODY:');
++		console.error(data);
++		console.error('METADATA:');
++		console.error(options.metadata);
++		console.error('STORE NAME:');
++		console.error(this.name);
 +		throw new BlobsInternalError(res);
 +	}
 +	async setJSON(key, data, options = {}) {
